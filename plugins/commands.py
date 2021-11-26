@@ -53,7 +53,7 @@ IST = pytz.timezone(Config.TIME_ZONE)
 if Config.DATABASE_URI:
     from utils import db
 
-HOME_TEXT = "<b>Hey  [{}](tg://user?id={}) 🙋‍♂️\n\nIam A Bot Built To Play or Stream Videos In Telegram VoiceChats.\nI Can Stream Any YouTube Video Or A Telegram File Or Even A YouTube Live.</b>"
+HOME_TEXT = "<b>ʜᴇᴇʟᴏ [{}](tg://user?id={}) 🙋‍♂️\n\nɪ ᴀᴍ ᴀ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ᴘʟᴀʏ ᴏʀ ꜱᴛʀᴇᴀᴍ ᴠɪᴅᴇᴏꜱ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠᴏɪᴄᴇᴄʜᴀᴛꜱ.ɪ ᴄᴀɴ ꜱᴛʀᴇᴀᴍ ᴀɴʏ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ ᴏʀ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ꜰɪʟᴇ ᴏʀ ᴇᴠᴇɴ ᴀ ʏᴏᴜᴛᴜʙᴇ ʟɪᴠᴇ.</b>"
 admin_filter=filters.create(is_admin) 
 
 @Client.on_message(filters.command(['start', f"start@{Config.BOT_USERNAME}"]))
@@ -129,12 +129,12 @@ async def start(client, message):
         return
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-            InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/VCPlayerBot')
+            InlineKeyboardButton('ʀʜʏᴛʜᴍ', url='https://t.me/RhythmXChill'),
+            InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/Btw_Its_Hiro')
         ],
         [
-            InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help_main'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help_main'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ', callback_data='close'),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -148,19 +148,19 @@ async def show_help(client, message):
     reply_markup=InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("Play", callback_data='help_play'),
-                InlineKeyboardButton("Settings", callback_data=f"help_settings"),
-                InlineKeyboardButton("Recording", callback_data='help_record'),
+                InlineKeyboardButton("ᴘʟᴀʏ", callback_data='help_play'),
+                InlineKeyboardButton("ꜱᴇᴛᴛɪɴɢꜱ", callback_data=f"help_settings"),
+                InlineKeyboardButton("ʀᴇᴄᴏʀᴅɪɴɢ", callback_data='help_record'),
             ],
             [
-                InlineKeyboardButton("Scheduling", callback_data="help_schedule"),
-                InlineKeyboardButton("Controling", callback_data='help_control'),
-                InlineKeyboardButton("Admins", callback_data="help_admin"),
+                InlineKeyboardButton("ꜱᴄʜᴇᴅᴜʟɪɴɢ", callback_data="help_schedule"),
+                InlineKeyboardButton("ᴄᴏɴᴛʀᴏʟɪɴɢ", callback_data='help_control'),
+                InlineKeyboardButton("ᴀᴅᴍɪɴꜱ", callback_data="help_admin"),
             ],
             [
-                InlineKeyboardButton("Misc", callback_data='help_misc'),
-                InlineKeyboardButton("Config Vars", callback_data='help_env'),
-                InlineKeyboardButton("Close", callback_data="close"),
+                InlineKeyboardButton("ᴍɪꜱᴄ", callback_data='help_misc'),
+                InlineKeyboardButton("ᴄᴏɴꜰɪɢ ᴠᴀʀꜱ", callback_data='help_env'),
+                InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data="close"),
             ],
         ]
         )
@@ -170,7 +170,7 @@ async def show_help(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(f"Help", url=f"https://telegram.dog/{Config.BOT_USERNAME}?start=help"),
+                        InlineKeyboardButton(f"ʜᴇʟᴘ", url=f"https://telegram.dog/{Config.BOT_USERNAME}?start=help"),
                     ]
                 ]
             ),)
@@ -188,12 +188,12 @@ async def show_help(client, message):
 async def repo_(client, message):
     buttons = [
         [
-            InlineKeyboardButton('🧩 Repository', url='https://github.com/subinps/VCPlayerBot'),
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),     
+            InlineKeyboardButton('ʀᴇᴘᴏ', url='https://telegra.ph/file/d70819ff8968fae605cca.png'),
+            InlineKeyboardButton('ʀʜʏᴛʜᴍ', url='https://t.me/RhythmXChill'),     
         ],
         [
-            InlineKeyboardButton("🎞 How to Deploy", url='https://youtu.be/mnWgZMrNe_0'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton("ᴅᴇᴘʟᴏʏ", url='https://youtu.be/5qap5aO4i9A'),
+            InlineKeyboardButton('ᴄʟᴏꜱᴇ', callback_data='close'),
         ]
     ]
     await message.reply("<b>The source code of this bot is public and can be found at <a href=https://github.com/subinps/VCPlayerBot>VCPlayerBot.</a>\nYou can deploy your own bot and use in your group.\n\nFeel free to star☀️ the repo if you liked it 🙃.</b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
