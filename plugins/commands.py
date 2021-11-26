@@ -53,7 +53,7 @@ IST = pytz.timezone(Config.TIME_ZONE)
 if Config.DATABASE_URI:
     from utils import db
 
-HOME_TEXT = "<b>ʜᴇᴇʟᴏ [{}](tg://user?id={}) 🙋‍♂️\n\nɪ ᴀᴍ ᴀ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ᴘʟᴀʏ ᴏʀ ꜱᴛʀᴇᴀᴍ ᴠɪᴅᴇᴏꜱ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠᴏɪᴄᴇᴄʜᴀᴛꜱ.ɪ ᴄᴀɴ ꜱᴛʀᴇᴀᴍ ᴀɴʏ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ ᴏʀ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ꜰɪʟᴇ ᴏʀ ᴇᴠᴇɴ ᴀ ʏᴏᴜᴛᴜʙᴇ ʟɪᴠᴇ.</b>"
+HOME_TEXT = "<b>ʜᴇʟʟᴏ [{}](tg://user?id={}) 🙋‍♂️\n\nɪ'ᴍ ᴀ ʙᴏᴛ ʙᴜɪʟᴛ ᴛᴏ ᴘʟᴀʏ ᴏʀ ꜱᴛʀᴇᴀᴍ ᴠɪᴅᴇᴏꜱ ɪɴ ᴛᴇʟᴇɢʀᴀᴍ ᴠᴏɪᴄᴇᴄʜᴀᴛꜱ.ɪ ᴄᴀɴ ꜱᴛʀᴇᴀᴍ ᴀɴʏ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ ᴏʀ ᴀ ᴛᴇʟᴇɢʀᴀᴍ ꜰɪʟᴇ ᴏʀ ᴇᴠᴇɴ ᴀ ʏᴏᴜᴛᴜʙᴇ ʟɪᴠᴇ.</b>"
 admin_filter=filters.create(is_admin) 
 
 @Client.on_message(filters.command(['start', f"start@{Config.BOT_USERNAME}"]))
@@ -63,18 +63,18 @@ async def start(client, message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(f"Play", callback_data='help_play'),
-                        InlineKeyboardButton(f"Settings", callback_data=f"help_settings"),
-                        InlineKeyboardButton(f"Recording", callback_data='help_record'),
+                        InlineKeyboardButton(f"ᴘʟᴀʏ", callback_data='help_play'),
+                        InlineKeyboardButton(f"ꜱᴇᴛᴛɪɴɢꜱ", callback_data=f"help_settings"),
+                        InlineKeyboardButton(f"ʀᴇᴄᴏʀᴅɪɴɢ", callback_data='help_record'),
                     ],
                     [
-                        InlineKeyboardButton("Scheduling", callback_data="help_schedule"),
-                        InlineKeyboardButton("Controling", callback_data='help_control'),
-                        InlineKeyboardButton("Admins", callback_data="help_admin"),
+                        InlineKeyboardButton("ꜱᴄʜᴇᴅᴜʟɪɴɢ", callback_data="help_schedule"),
+                        InlineKeyboardButton("ᴄᴏɴᴛʀᴏʟɪɴɢ", callback_data='help_control'),
+                        InlineKeyboardButton("ᴀᴅᴍɪɴꜱ", callback_data="help_admin"),
                     ],
                     [
-                        InlineKeyboardButton(f"Misc", callback_data='help_misc'),
-                        InlineKeyboardButton("Close", callback_data="close"),
+                        InlineKeyboardButton(f"ᴍɪꜱᴄ", callback_data='help_misc'),
+                        InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data="close"),
                     ],
                 ]
                 )
